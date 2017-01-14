@@ -1,0 +1,100 @@
+body{
+	background: url(../images/paper.png);
+	font-size: 14px;
+	font-family: Arial;
+}
+.corps{
+	background: black;
+	width:200px;
+	height: 430px;
+	box-shadow: 0 0 5px rgba(0,0,0,2);
+	border-radius: 25px;
+	border: 2px solid #666;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+.min-circle{
+	position: absolute;
+	box-shadow:inset 0 0 10px rgba(255,255,255,.4);
+	border: 1px solid #333;
+	width: 8px;
+	height: 8px;
+	margin-left: 96px;
+	margin-top: 18px;
+	border-radius:50%;
+}
+.line{
+	background: #333;
+	width: 34px;
+	height: 5px;
+	border-radius:50px;
+	position: relative;
+	top: 35px;
+	left: 83px;
+	box-shadow: 1px 0 0 rgba(255,255,255,.4), inset 0 0 1px rgba(255,255,255,.5);
+}
+.window{
+	background: white;
+	width:180px;
+	height:310px;
+	margin-left: 10px;
+	margin-top:55px;
+
+}
+.circle{
+	background: black;
+	width: 40px;
+	height:40px;
+	border-radius:50%;
+	margin-left: 80px;
+	margin-top: 7px;
+	box-shadow: 1px 0 0 rgba(255,255,255,.4), inset 0 0 5px rgba(255,255,255,.6);
+}
+.sqrt{
+	position: relative;
+	box-shadow:inset 0 0 5px rgba(255,255,255,.2);
+	border: 1px solid #333;
+	width: 14px;
+	height: 14px;
+	margin-left: 93px;
+	margin-top: -27px;
+}
+
+
+
+
+.p1,.p2 {
+	padding-top: 5px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.ul1{
+	position: absolute;
+	margin-left:-35px; 
+	list-style: none;
+	width: 180px;
+	height: 120px;
+	top: 90px;
+	left: 65px;
+
+}
+.ul1:hover{
+	cursor: pointer;
+
+
+}
+.ul1 .li1 a{
+	text-decoration: none;
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+	padding-left: 3px;
+	color: #999;
+	background: url(../images/dropdown-bg-hover.gif);
+	display: block;
+}
+.ul1 .li1 a:hover{
+	transition : padding-left .5s ease-in-out;
+	padding-left: 40px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "../Jquery/jquery-1.12.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var text = "";
+			$(".btn-slide").on("click",function(){
+				$("#panel").slideToggle(1000);
+				var h = $("#panel").css("height");
+				if(h == "1px")
+					text = "Slide Palel &#9650";
+				else
+					text = "Slide Palel &#9660";
+				$(this).html(text);
+			});
+		});
+	</script>
+	<style>
+		body{
+		background: url(../img/seamless_paper_texture.png);
+	}
+		div{
+			width:100px;
+			height: 100px;
+		 	background: #005682;
+			margin-top: 2px;
+			display: inline-block;
+		}
+		div:hover{
+			transform: rotateX(360deg) rotateY(360deg);
+			transition:5s;
+		}
+		.div1{
+			width:100px;
+			height:100px;
+			background: #019cd0;
+		}
+		.div1:hover{
+			transform: rotateY(180deg) ;
+			transition:1s;
+		}
+		.div2, .div5{
+			border: 1px solid silver;
+			border-radius: 5px;
+			background-color: #fafafa;
+			width: 150;
+			position: relative;
+		}
+		.div5{
+			width: 250px;
+			height: 150px;
+			margin-left: 300px;
+		}
+		.div3{
+			background:#00b4f0;
+		}
+		.div4{
+			background: #1184d0;
+		}
+		.div6{
+			background: #1cad73;
+		}
+
+.div7 { 
+	background-color: #137a85;
+}
+.div8 { 
+	background-color: #1dadeb;
+}
+.div9{ 
+	background-color: #5cd7ea;
+}
+.div10 { 
+	background-color: #9bbac1;
+}
+.div11 { 
+	background-color: #1cad73;
+}
+.div12 { 
+	background-color: #1eb7d0;
+}
+.div13{ 
+	background-color: #16546e;
+}
+.div14 { 
+	background-color: #f7565a;
+}
+.div15 { 
+	background-color: #27af20;
+}
+.div16 { 
+	background-color: #9bbf3c;
+}
+.div17 { 
+	background-color: #fd6a87;
+}
+.div18{ 
+	background-color: #20c6b9;
+}
+.div19 { 
+	background-color: #fdad2e;
+}
+.div20 { 
+	background-color: #fdad2e;
+}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div class = "div4">lorem2</div>
+	<div class = "div1">lorem2</div>
+	<div class = "div2">lorem2</div>
+	<div class = "div3">lorem2</div>
+	<div class="div5">lorem2</div>
+	<div class="div6">lorem2</div>
+
+	<div class="div7"></div>
+	<div class="div8"></div>
+	<div class="div9"></div>
+	<div class="div10"></div>
+	<div class="div11"></div>
+	<div class="div12"></div>
+	<div class="div13"></div>
+	<div class="div14"></div>
+	<div class="div15"></div>
+	<div class="div16"></div>
+	<div class="div17"></div>
+	<div class="div18"></div>
+	<div class="div19"></div>
+	<div class="div20"></div>
+
+
+</body>
+</html>
+

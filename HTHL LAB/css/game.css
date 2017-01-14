@@ -1,0 +1,41 @@
+#hero{
+	width:50px;
+	height:50px;
+	background: black;
+	margin-top: 500px;
+	margin-left: 500px;
+	position: absolute;
+	border-radius:50%;
+}
+
+#block{
+	margin-top: 300px;
+	width: 100%;
+	height: 50px;
+	background:#333;
+	position: absolute;
+
+}
+
+#DivlikeImg{
+	width: 100px;
+	height: 100px;
+
+}
+
+#likeImg1, #likeImg2{
+    width:24px;
+    height: 24px;
+    background: url("../JS/icons.jpg") no-repeat;
+    border: 2px solid #fff;
+    
+     /*background-position-top:50px;*/
+	/*overflow: auto;*/
+}
+
+#likeImg1{
+	background-position: -131px -140px;
+}
+#likeImg2{
+	background-position: -162px -140px;
+}

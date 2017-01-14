@@ -1,0 +1,35 @@
+body{
+	background: #333;
+	width: 1250px;
+	height: 500px: 
+	z-index:-2;
+}
+div{
+	width:100px;
+	height:100px;
+	margin-top: 10px;
+	/*margin:100px;*/
+	background:#fff;
+	position: absolute;
+	border-radius:50%;
+	z-index:2;
+	/*box-shadow: 0 0 20px rgba(0,0,0,.6);*/
+}
+p{
+	float:right;
+	margin-right:50px;
+	font-size: 36px;
+	font-family:sans-serif;
+	color:white;
+	z-index:2;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #ddcca3;
+	
+}
+
+#menu{
+	display:block;
+	width:100px;
+	height:50px;
+	background: rgb(0,255,255);
+	margin: 0 auto;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		font-size: 1em;
+		font-family: sans-serif;
+	}
+		#btn2{
+			display: none;
+		}
+
+		.div1{
+			width: 400px;
+			height: 30px;
+			background: #999;
+			border-bottom: 2px solid silver;
+			margin-top: -16px;
+		}
+		.div2{
+			margin-top: -16px;
+			width: 400px;
+			height: 100px;
+			background: #fafafa;
+			display: none;
+
+		}
+		p{
+			padding: 10px 10px;
+			/*float: left;*/
+		}
+		h3{
+			/*display: inline-block;*/
+			line-height: 30px;
+			/*position: relative;*/
+			/*padding-top: -10px;*/
+			/*float: left;*/
+		}
+
+		button{
+			float: right;
+			margin-top: -45px;
+			/*position: absolute;*/
+			/*display: inline-block;*/
+		}
+		#div{
+			width: 200px;
+			height: 200px;
+			background: #555;
+			margin: 200px;
+		}
+	</style>
+
+	<script src = '../Jquery/jquery-1.12.1.min.js'></script>
+
+	<script>
+		$(document).ready(function (){
+			$(".div1").append("<button class = 'btn1' id = 'btn1'>&#9660</button>");
+			$(".div1").append("<button class = 'btn2' id = 'btn2'>&#9650</button>");
+			$('.btn1').on("click", function (){
+				var id = $(this).parent().next().slideDown(500);
+				$(this).hide();
+				$(this).next().slideDown(500);
+				console.log($('#btn1'));
+			});
+			$('.btn2').bind("click", function (){
+				var id = $(this).parent().next().slideUp(500);
+				$(this).slideUp(500);
+				$(this).prev().show();
+			});
+			var b = 0;
+			$("#div").on("mouseenter", function(){
+				b = 1;
+				console.log(b);
+			});
+			$("#div").on("mouseleave", function(){
+					b = 0;
+					$(window).click(function(){
+						if(b%2 == 0){
+							console.log(b);
+						}
+					});
+			});
+			// $("#input").val("hello");
+		});
+	</script>
+</head>
+<body>
+	<div class="div1" id = "div1"> <h3>Question One Sample Text</h3></div>
+	<div class = "div2"  id = "div12">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio provident numquam esse unde, inventore minus quae dicta ipsum assumenda voluptatem.</p>
+	</div>
+
+	<div class="div1" id = "div2"> <h3>This is Question Two</h3></div>
+	<div class = "div2" id = "div22">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio provident numquam esse unde, inventore minus quae dicta ipsum assumenda voluptatem.</p>
+	</div>
+	
+	<div class="div1" id = "div3"> <h3>Anoter Question here</h3></div>
+	<div class = "div2" id = "div32">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio provident numquam esse unde, inventore minus quae dicta ipsum assumenda voluptatem.</p>
+	</div>
+
+	<div class="div1" id = "div4"> <h3>Simple Heading</h3></div>
+	<div class = "div2" id = "div42">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio provident numquam esse unde, inventore minus quae dicta ipsum assumenda voluptatem.</p>
+	</div>
+	<div id="div"></div>
+</body>
+</html>

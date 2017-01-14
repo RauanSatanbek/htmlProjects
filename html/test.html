@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/test.css">
+	<!-- <script src = '../js/test.js'></script> -->
+	<script src = '../Jquery/jquery-1.12.1.js'></script>
+	<script src = '../Jquery/jquery-ui.js'></script>
+	<script>
+		$(document).ready(function (){
+			$("html").bind("mousemove", function(){
+				var x = event.screenX;
+				var y = event.screenY;
+				var div = $("#div");
+				div.animate({marginTop:y - 130 + "px",marginLeft:x - 50 + "px"},10);
+				// div.animate({marginLeft:x - 50 + "px"},10);
+				// div.css({
+				// 	marginTop:y - 130 + "px",
+				// 	marginLeft:x - 50 + "px"
+				// });
+			});
+
+			$("button").bind("click", run);
+		});
+
+		function run(){
+			var div = $("body");
+			
+			div.animate({backgroundColor:"grgb(0,255,255)"},2000);
+			// div.animate({width:"100px"},1);
+			// div.animate({height:"100px"},1500);
+			div.animate({backgroundColor:"red"},2000);
+			div.animate({backgroundColor:"blue"},2000);
+			div.animate({backgroundColor:"green"},2000);
+			div.animate({backgroundColor:"gray"},2000);
+			div.animate({backgroundColor:"yellow"},2000);
+			div.animate({backgroundColor:"silver"},2000);
+			div.animate({backgroundColor:"black"},2000);
+			div.animate({backgroundColor:"white"},2000);
+
+			setTimeout("run()",2000);
+		}
+	</script>
+</head>
+<body>
+	<button href="" id = "button">Animate</button>
+	<div id = "div"></div>
+</body>
+</html>

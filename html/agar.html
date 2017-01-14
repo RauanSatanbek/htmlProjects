@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/agarCss.css">
+	<script type="text/javascript" src = '../js/agarJs.js'></script>
+</head>
+<body>
+	<div id = 'div'></div>
+	<button onclick = 'run()'>run</button>
+	<script type="text/javascript">
+	var y = document.getElementById("div");
+	// console.log(y.style.width = '200px');
+	// console.log(y.style.marginLeft + 78465);
+	var w = 0;
+	var d = 0;
+	var s = 0;
+	var a = 0;
+	window.onkeypress = function(e){
+		var id = document.getElementById("div");
+		var key = e.keyCode;
+		if(key == 100){
+			// d = a;
+			console.log('d');
+			d+=100;
+			if(d > 1250) d = 1250;
+			// w+=3;
+			console.log(d);
+			id.style.marginLeft = (d + 'px');
+			// id.style.marginTop = (w + 'px');
+		}
+
+		if(key == 97){
+			// a = d;
+			d-=100;
+			if(d < 0) d = 0;
+			id.style.marginLeft = (d + 'px');
+		}
+
+		if (key == 119){
+			w -=3;
+			id.style.marginTop = (w + 'px');
+		}
+
+		if (key == 115){
+			w +=3;
+			id.style.marginTop = (w + 'px');
+		}
+	}
+
+	</script>
+</body>
+</html>

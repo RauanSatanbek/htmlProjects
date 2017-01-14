@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/Lab.css">
+</head>
+<body>
+
+	<img src="../img/Rauan/1.JPG"  width="180" height="250" class = 'rauan' id = "rauan">
+	<img src="../img/Alpa/1.JPG"  width="180" height="250" class = 'Alpa-Zhandos' id = "alpa">
+	<img src="../img/Zhandos/1.JPG" width="180" height="250" class = 'Alpa-Zhandos' id = 'zhandos'>
+	<script type="text/javascript">
+		window.onmousemove = function(e){
+			var x = e.clientX;
+			var y = e.clientY;
+			if (y < 70 && x< 332 ){
+				document.getElementById("rauan").src = "../img/Rauan/7.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/7.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (y > 70 && y < 320 && x < 516&& x >332){
+				document.getElementById("rauan").src = "../img/Rauan/8.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/2.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (y > 70 && y < 320 && x < 603 && x > 516){
+				document.getElementById("rauan").src = "../img/Rauan/8.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 332 && x < 516 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/2.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 603 && x < 784 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/2.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+			else if (x > 603 && x < 784 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/3.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 784 && x < 844 && y > 70 && y < 320){
+				document.getElementById("rauan").src = "../img/Rauan/5.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 844 && x < 1027 && y > 70 && y < 320){
+				document.getElementById("rauan").src = "../img/Rauan/5.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/2.JPG";
+			}
+
+			else if (x > 784 && x < 844 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 844 && x < 1027 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/2.JPG";
+			}
+
+			else if (x > 516 && x < 603 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 844 && x < 1027 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/4.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/2.JPG";
+			}
+
+			else if (x > 784 && x < 844 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/4.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+
+			else if (x > 516 && x < 603 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/7.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 332 && x < 516 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/7.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/2.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+			else if (x < 332 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/7.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/7.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x < 332 && y > 70 && y < 320){
+				document.getElementById("rauan").src = "../img/Rauan/8.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/7.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x < 332 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/7.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x < 332 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/8.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/8.JPG";
+			}
+
+			else if (x < 332 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/9.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+
+			else if (x < 332 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/9.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+
+			else if (x > 332 && x < 516 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/3.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+			else if (x > 516 && x < 603 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/6.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+
+			else if (x > 603 && x < 784 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/3.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/6.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+
+			else if (x > 784 && x < 844 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/6.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/9.JPG";
+			}
+
+			else if (x > 1027 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/6.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/6.JPG";
+			}
+
+			else if (x > 1027 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/5.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/5.JPG";
+			}
+
+			else if (x > 1027 && y > 320 && y < 390){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/4.JPG";
+			}
+
+			else if (x > 1027 && y > 70 && y < 320){
+				document.getElementById("rauan").src = "../img/Rauan/5.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/4.JPG";
+			}
+
+			else if (x > 1027 && y < 70){
+				document.getElementById("rauan").src = "../img/Rauan/4.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/4.JPG";
+			}
+
+			else if (x >603 && x < 784 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/3.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/5.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/8.JPG";
+			}
+			else if (x > 516 && x < 603 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/5.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/8.JPG";
+			}
+			else if (x > 784 && x < 844 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/5.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/8.JPG";
+			}
+			else if (x >844 && x < 1027 && y > 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/6.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/3.JPG";
+			}
+
+			else if (x > 603 && x < 784 && y > 70 && y < 320){
+				document.getElementById("rauan").src = "../img/Rauan/1.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/4.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/7.JPG";
+			}
+
+			else if (x > 332 && x < 516 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/9.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/1.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/8.JPG";
+			}
+
+			else if (x > 844 && x < 1027 && y > 390 && y < 640){
+				document.getElementById("rauan").src = "../img/Rauan/6.JPG";
+				document.getElementById("alpa").src = "../img/Alpa/5.JPG";
+				document.getElementById("zhandos").src = "../img/Zhandos/1.JPG";
+			}
+		}
+	</script>
+</body>
+</html>

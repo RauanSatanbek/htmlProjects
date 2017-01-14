@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<title></title>
+</head>
+<body>
+<div class = 'div8'> Решение задач на Python и Java
+</div>
+<h2><a href="task5.html" style="text-decoration: none;">Прямоугольник - 2</a></h2>
+<div class = 'div9'>
+	<h2 class = 'h21'>Python</h2>
+	<hr style="bacckground: #666;">
+	<pre>
+    import math
+    fr = open('input.txt','r')
+    fw = open('output.txt','w')
+    c = 0
+    m = fr.read().split()
+    for i in range(6):
+        x1 = int(m[0])
+        y1 = int(m[1])
+             
+        x2 = int(m[2])
+        y2 = int(m[3])
+             
+        x3 = int(m[4])
+        y3 = int(m[5])
+            
+             
+    A = math.sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2))
+    B = math.sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2))
+    C = math.sqrt(pow((x1 - x3), 2) + pow((y1 - y3), 2))
+    m1 = [A,B,C]
+    p = m1.index(max(m1))
+    if (p == 0):
+        fw.write(str((x1 + x2)-x3) + " " + str((y1 + y2)-y3))
+
+    elif p == 1:
+        fw.write(str((x3 + x2)-x1) + " " + str((y3 + y2)-y1))
+    else:
+        fw.write(str((x3 + x1)-x2) + " " + str((y3 + y1)-y2))
+    fw.close()
+	</pre>
+</div>
+<div class = 'div10'>
+	<h2 class = 'h21' >Java</h2>
+	<hr style="bacckground: #666;">
+	<pre>
+import java.io.*;
+import java.util.*;
+public class Main{
+    public static void main(String args[]) throws IOException{
+        new Main().run();
+        }
+    Scanner fr;
+    PrintWriter fw;
+    int c = 0;
+    int p;
+    private void run() throws IOException{
+        fr = new Scanner(new File("input.txt"));
+        fw = new PrintWriter(new File("output.txt"));
+        int m[] =new int[6];
+        for (int i = 0; i < 6; i++){
+            m[i] = fr.nextInt();
+        }
+        int x1 = m[0];
+        int y1 = m[1];
+         
+        int x2 = m[2];
+        int y2 = m[3];
+         
+        int x3 = m[4];
+        int y3 = m[5];
+        
+         
+        double A = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
+        double B = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2));
+        double C = Math.sqrt(Math.pow((x1 - x3), 2) + Math.pow((y1 - y3), 2));
+        double [] m1 = {A,B,C};
+        for(int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+                if (m1[i] > m1[j]){
+                    c++;
+                }
+                 
+            }
+            if (c == 2){
+                p = i;
+                break;
+            }
+            else {
+                c = 0;
+            }
+        }
+        if (p == 0){
+            fw.println(((x1 + x2)-x3) + " " + ((y1 + y2)-y3));
+             
+        }
+        else if (p == 1){
+            fw.println(((x3 + x2)-x1) + " " + ((y3 + y2)-y1));
+        }
+        else{
+            fw.println(((x3 + x1)-x2) + " " + ((y3 + y1)-y2));
+        }
+        fw.close();
+       
+    } 
+}
+	</pre>
+</div>
+</body>
+</html>

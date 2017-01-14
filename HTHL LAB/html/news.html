@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "../Jquery/jquery-1.12.1.min.js"></script>
+	<style>
+	#textareaNews , #divNews{
+			width: 400px;
+			min-height: 100px;
+	}
+	#textareaNews{
+			resize:none;
+		}
+		#divNews{
+			border:1px solid #333;
+
+			overflow: hidden;
+			display: none;
+		}
+	</style>
+		
+	<script>
+	var height = 0;
+	$(document).ready(function(){
+		$("#textareaNews").on("keyup", function(){
+			var text = $(this).val();
+			// console.log(text);
+			$("#divNews").text("");
+			$("#divNews").text("" + text);
+			height = Number($("#divNews").css("height").substr(0, $("#divNews").css("height").length - 2));
+			$("#textareaNews").css("height", (height ) + "px");
+			console.log(height);
+		});
+	});
+	</script>
+</head>
+<body>
+<textarea name="" id="textareaNews" cols="30" rows="10"></textarea>
+<div id = "divNews"></div>
+</body>
+</html>
+

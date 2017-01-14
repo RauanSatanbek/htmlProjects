@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "../Jquery/jquery-1.12.1.min.js"></script>
+	<style>
+		#div{
+
+			width: 200px;
+			height: 200px;
+			overflow: hidden;
+			border:1px solid #333;
+		}
+		/*#img:hover{
+			transition:.5s;
+			width: 230px;
+			height: 230px;
+		}*/
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$("#img").on("mouseover", function(){
+				$("#img").animate({width:"100px", height: "100px"}, 300);
+			});
+			$("#img").on("mouseout", function(){
+				$("#img").animate({width:"200px", height: "200px"}, 300);
+				console.log(45);
+			});
+		});
+	</script>
+</head>
+<body>
+<div id = "div">
+	<img src="../img/Alpa/3.JPG" height="200" width="200" alt="" id = "img">
+</div>
+</body>
+</html>

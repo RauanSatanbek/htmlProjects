@@ -1,0 +1,15 @@
+*{
+	outline:none;
+}
+
+input{
+	border-radius:5px;
+	border: 2px solid #666;
+}
+
+input:focus{
+	border-radius:5px;
+	border: 2px solid #00B4DA;
+	box-shadow: 0 0 5px rgba(0,180,218,.5);
+}
+

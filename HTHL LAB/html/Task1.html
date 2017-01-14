@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "../Jquery/jquery-1.12.1.min.js"></script>
+	<link rel="stylesheet" href="../css/Task1.css">
+	<script>
+		$(document).ready(function (){
+			$(".p1").bind("click",function(){
+				var s = $(this)[0].className.substr(0,1);
+				$("#div" + s).show(1000);
+				$(".p2" + s).show();
+				$(".p1" + s).hide();
+			});
+
+			$(".p2").bind("click",function(){
+				var s = $(this)[0].className.substr(0,1);
+				$("#div" + s).slideUp(1000);
+				$(".p1" + s).show();
+				$(".p2" + s).hide();
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+	<div class = "post">Post 1</div>
+	<div id = "div1" style = "display:none">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Accusantium aspernatur eos, enim aut ut.</p>
+		<p>Rem magnam voluptate itaque, omnis vero.</p>
+	</div>
+	<p class="1 p1 p11" >Open</p>
+	<p class="1 p2 p21" style = "display:none">Close</p>
+
+	<div class = "post">Post 2</div>
+	<div id = "div2" style = "display:none">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Accusantium aspernatur eos, enim aut ut.</p>
+		<p>Rem magnam voluptate itaque, omnis vero.</p>
+	</div>
+	<p class="2 p1 p12">Open</p>
+	<p class="2 p2 p22" style = "display:none">Close</p>
+
+	<div class = "post">Post 3</div>
+	<div id = "div3" style = "display:none">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Accusantium aspernatur eos, enim aut ut.</p>
+		<p>Rem magnam voluptate itaque, omnis vero.</p>
+	</div>
+	<p class="3 p1 p13">Open</p>
+	<p class="3 p2 p23" style = "display:none">Close</p>
+</body>
+</html>

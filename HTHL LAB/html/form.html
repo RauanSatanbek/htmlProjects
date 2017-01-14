@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src = "../JS/jquery-1.12.1.min.js"></script>
+	<style>
+	*{
+		margin: 0 0;
+		padding:0 0;
+		font-family: Arial;
+		text-decoration: none;
+	}
+	body{
+		background: url(../img/seamless_paper_texture.png);
+	}
+	.contaner{
+		width: 1350px;
+
+	}
+	.middle{
+		width: 200px;
+		height: 600px;
+		background: #444;
+		margin-top: 50px;
+	}
+	.mainNav{
+		display: block;
+		background:#00b4f0;
+		width: 100%;
+		height: 100px;
+	}
+	.nav{
+		display: block;
+		background:#005682;
+		width: 100%;
+		height: 50px;
+		position: fixed;
+	}
+	#secondMenuHead {
+		display: block;
+		/*background-color:#00b4f0;*/
+		margin: 0 auto;
+		margin-left: 30px;
+		font-size: 1em;
+	}
+
+	nav.ph-lift1 > ul > li {
+	   float: left;
+	   margin-left:10px;
+	   margin-top: -2px;
+	   list-style-type: none;
+	}
+
+	nav.ph-lift1 ul li {
+		height: 50px;
+		line-height: 50px;
+		background-color:#005682;
+		/*background-color:#00b4f0;*/
+		-webkit-transition: all.6s ease;
+		-moz-transition: all.6s ease;
+		-o-transition: all.6s ease;
+		-ms-transition: all.6s ease;
+		transition: all.6s ease;
+		list-style-type: none;
+
+	}
+
+	nav.ph-lift1 ul li ul {
+		max-height: 0;
+		-webkit-transition: all.6s ease;
+		-moz-transition: all.6s ease;
+		overflow: hidden;
+		display: block;
+		position: absolute; 
+		z-index: 9999; 
+	}
+
+	nav.ph-lift1 ul li:hover {
+		/*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) inset;*/
+		/*background: darkolivegreen;*/
+		background-color:#005682;
+	}
+
+	nav.ph-lift1 ul li:hover ul {
+		max-height: 300px;
+	}
+	   
+	nav.ph-lift1 ul li a {
+		display: block;
+		overflow: hidden;
+		color:white; /*#546a2f*/
+	    height: 50px;
+	}
+
+	nav.ph-lift1 ul li ul li a {
+		color: white;/*#7e7e00*/
+	}
+
+	nav.ph-lift1 ul li ul li:hover {
+		/*background: olive;*/
+		background-color:#1184d0;
+	}
+
+	nav.ph-lift1 ul li a span {
+		-webkit-transition: all.6s ease;
+		-moz-transition: all.6s ease;
+		-o-transition: all.6s ease;
+		-ms-transition: all.6s ease;
+		transition: all.6s ease;
+		display: block;
+		padding: 0 10px;
+	}
+
+	nav.ph-lift1 ul li:hover > a span {
+		margin-top: -50px;
+		color: white;
+		text-shadow: 0 1px 2px  black; 
+	}
+
+	nav.ph-lift1 ul li a span:after {
+		content: attr(data-title);
+		display: block; 
+	}
+</style>
+
+<script>
+	
+	$(document).ready(function(){
+		window.onscroll = function() {
+		  var scrolled = window.pageYOffset;
+		  // document.getElementById('showScroll').innerHTML = scrolled + 'px';
+		  // console.log();
+		  if(scrolled < 101){
+		  	$(".nav").css("marginTop", (scrolled * -1) + "px");
+		  }
+		  else{
+		  	$(".nav").css("marginTop", "-100px");
+		  	$(".nav").css("position","fixed");
+
+		  }
+		}
+	});
+</script>
+</head>
+<body>
+<div class="contaner">
+	<div class = "mainNav"></div>
+	<div class="nav">
+	<table id="head_table">
+		<tr>
+			<td id="secondMenuHead" colspan="2">
+				<object>
+					<nav class="ph-lift1">
+						<ul>
+							<li class="active"><a href="http://plurrimi.com" data-title="На главную"><span data-title="На главную">Главная</span></a></li>
+							<li><a href="http://plurrimi.com/facts"><span data-title="Хотите узнать?">Интересные факты</span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/facts/earth"><span data-title="Факты о разном">Факты о Земле</span></a></li>
+									<li><a href="http://plurrimi.com/facts/universe"><span data-title="Факты про космос">Факты о Вселенной</span></a></li>
+									<li><a href="http://plurrimi.com/facts/interesno"><span data-title="Вы будете удивлены">Вы этого не знали</span></a></li>
+									<li><a href="http://plurrimi.com/facts/raznoe"><span data-title="Интересное обо всем">Познавательные статьи</span></a></li>
+								</ul>
+							</li>
+							<li><a href="http://plurrimi.com/science"><span data-title="Новости науки">Научные статьи</span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/science/medicine"><span data-title="Наука и медицина">Медицина</span></a></li>
+									<li><a href="http://plurrimi.com/science/electronics"><span data-title="Новости и электроника">Электроника</span></a></li>
+									<li><a href="http://plurrimi.com/science/robots"><span data-title="Наука в роботостроении">Роботы</span></a></li>
+									<li><a href="http://plurrimi.com/science/other"><span data-title="Остальные изобретения">Прочее</span></a></li>
+								</ul>
+							</li>
+							<li><a href="http://plurrimi.com/lenta"><span data-title="Короткие посты">Лента новостей</span></a></li>
+							<li><a href="http://plurrimi.com/Buy"><span data-title="Интересные вещи"><center>Магазин</center></span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/Разделы"><span data-title="Разделы магазина">Разделы</span></a></li>
+									<li><a href="http://plurrimi.com/shop?html=infa"><span data-title="Информация о магазине">О магазине</span></a></li>
+									<li><a href="http://plurrimi.com/shop?html=promise"><span data-title="Гарантии магазина">Гарантии</span></a></li>
+									<li><a href="http://plurrimi.com/shop?html=delivery"><span data-title="Информация о доставке">Доставка</span></a></li>
+									<li><a href="http://plurrimi.com/shop?html=help"><span data-title="Вопросы и ответы">Помощь</span></a></li>
+								</ul>
+							</li>
+							<li><a href="http://plurrimi.com/gadgets"><span data-title="Новинки гаджеты">Гаджеты</span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/gadgets/tablets"><span data-title="Обзоры планшетов">Планшеты</span></a></li>
+									<li><a href="http://plurrimi.com/gadgets/phones"><span data-title="Новинки телефонов">Телефоны</span></a></li>
+									<li><a href="http://plurrimi.com/gadgets/computers"><span data-title="Компьютерные новости">Компьютеры</span></a></li>
+									<li><a href="http://plurrimi.com/gadgets/other"><span data-title="Все остальное">Прочее</span></a></li>
+								</ul>
+							</li>
+							<li><a href="http://plurrimi.com/future"><span data-title="Что нас ждет?">Будущее</span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/future/gadgets"><span data-title="Заглянуть в будущее">Будущие технологии</span></a></li>
+									<li><a href="http://plurrimi.com/future/video"><span data-title="Видео о будущем">Представление будущего</span></a></li>
+								</ul>
+							</li>
+							<li><a href="http://plurrimi.com/secrets"><span data-title="Секреты мира">Тайны и загадки</span></a>
+								<ul>
+									<li><a href="http://plurrimi.com/secrets/world"><span data-title="Тайны планеты">Загадки на суше</span></a></li>
+									<li><a href="http://plurrimi.com/secrets/ocean"><span data-title="Загадки океанов">Тайны морей</span></a></li>
+									<li><a href="http://plurrimi.com/secrets/films"><span data-title="Документальные фильмы">Фильмы</span></a></li>
+									<li><a href="http://plurrimi.com/secrets/other"><span data-title="Тайны и загадки">Прочие тайны</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</object>
+			</td>
+		</tr>
+	</table></div>
+	<div class="middle"></div>
+</div>
+</body>
+</html>

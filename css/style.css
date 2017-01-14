@@ -1,0 +1,104 @@
+body{
+	background: url(../images/paper.png);
+	font-size: 14px;
+	font-family: Arial;
+}
+.div1, .div8{
+	width: 1350;
+	height:95px;
+	background: url(../images/dropdown-list-bg.gif);
+	font-size: 40px;
+	color: black;
+	text-align: center;
+	line-height: 95px;
+}
+
+
+.div2{
+	/*background: white;*/
+	width:210px;
+	height: 430px;
+	box-shadow: 0 0 20px rgba(0,0,0,.9);
+	border-radius: 20px;
+	border: 2px solid black;
+	margin-left: 50px;
+	margin-top: 50px;
+
+}
+.p1,.p2 {
+	padding-top: 5px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.ul1{
+	margin-left:-35px; 
+	list-style: none;
+	width: 200px;
+	height: 100px;
+
+}
+.ul1:hover{
+	cursor: pointer;
+	/*height: 100px;*/
+
+
+}
+.ul1 .li1 a{
+	text-decoration: none;
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+	padding-left: 30px;
+	color: #999;
+	background: url(../images/dropdown-bg-hover.gif);
+	display: block;
+}
+/*.ul1 .li1 a:first-child{
+	height: 30px;
+	line-height: 30px;
+	background: url(../images/dropdown-bg.gif);
+}*/
+.ul1 .li1 a:hover{
+	transition : padding-left .5s ease-in-out;
+	padding-left: 80px;
+}
+.div2 .div3{
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin-left: 75px;
+	margin-top: 30px;
+	box-shadow: 0 0 20px rgba(0,0,0,.9) , inset 0 5px -20px rgba(255,255,255,.8);
+}
+.div2 .div3:hover{
+	box-shadow: 0 0 0 rgba(0,0,0,.4) , inset 0 0 40px rgba(0,0,0,.8);
+}
+
+.add1{
+	margin-left: 10px;
+}
+
+.div2 .div4{
+	width: 50px;
+	height: 3px;
+	background: black;
+	margin-left: 83px;
+	margin-top: 15px;
+}
+/* text python and java*/
+.divv1, .divv2{
+	width: 1000px;
+	height: 400px;
+	box-shadow: 0 0 0 rgba(0,0,0,.4) , inset 0 0 40px rgba(0,0,0,.8);
+	padding-left: 15px;
+	padding-top: 10px;
+	float: right;
+	margin-top: -430px;
+	margin-right: 25px;
+
+}
+.divv2{
+	margin-top: 0;
+}

@@ -1,0 +1,107 @@
+.div1{
+	font-family: Arial;
+	font-size: 18px;
+	margin-top:  60px;
+	margin-left:31% ;
+	width: 38%;
+	height: 310px;
+	position: relative;
+	
+	box-shadow: 0 0 12px rgba(0,0,0,.8)
+
+
+}
+h3{
+	color: #4682B4;
+	padding: 60px 30px;
+}
+.div1 .div2{
+	content: '';
+	width: 150px;
+	height: 70px;
+	position: absolute;
+	left: 360px;
+	top:40px;
+	display: block;
+	background: url(../images/sdu.jpg) no-repeat;
+}
+.div1  p .p2{
+	position: absolute;
+	color:#555;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: -50px;
+	margin-left: 40px;
+	top: 10px;
+}
+
+.div1 .p2{
+	color:#555;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: -10px;
+	margin-left: 40px;
+}
+
+.div1 .div3{
+	color:#555;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	background: #A9A9A9;
+	width: 100px;
+	height:20px;
+	margin-left: 40px;
+	/*padding-top:3px;*/
+	line-height: 20px;
+	margin-top: -20px;
+}
+.div1 a{
+	text-decoration: none;
+}
+
+/*.div1 ul{
+	color:#555;
+	font-size: 13px;
+	font-weight: bold;
+	font-size: 13px;
+	position: absolute;
+	left: 250px;
+	top:200px;
+}*/
+.div1 .div4{
+	color:#555;
+	font-weight: bold;
+	font-size: 11px;
+	position: absolute;
+	left: 250px;
+	top:0;
+	width: 150px;
+	height: 20px;
+	/*background: red;*/
+
+}
+.p1{
+	font-family: Arial;
+	text-align: center;
+	font-size: 12.2px;
+	color: #444;
+}
+
+.p3{
+	position: absolute;
+	font-size: 11px;
+	color: green;
+	left: 170px;
+	bottom: 170px;
+
+}
+
+.div1 .div5{
+	position: relative;
+	top: -20px;
+}
+
+.input1{
+	
+}

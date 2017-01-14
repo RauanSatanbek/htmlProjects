@@ -1,0 +1,37 @@
+body{
+	font-family: Arial;
+	/*font-size: 1.2em;*/
+	color: white;
+}
+.div1{
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	
+}
+
+.div1 .Top{
+	height: 100px;
+	background: #222;
+}
+
+.div1 .Right{
+	width: 650px;
+	height: 800px;
+	background: #666;
+	float: left;
+	overflow: hidden;
+}
+
+.div1 .Left{
+	width: 350px;
+	height: 800px;
+	background: #ccc;
+	float: right;
+}
+
+.div1 .Bottom{
+	clear: both;
+	height: 100px;
+	background: #222;
+}

@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "Jquery/jquery-1.12.1.min.js"></script>
+	<script src = "Jquery/jQueryTransform.js"></script>
+    <script>
+    $(document).ready(function(){
+      var c1 = 0,
+        c2 = 1;
+      $("#div1").on("mouseenter",function(){
+        if(c1%2 == 0){
+          setTimeout(function(){
+            $('#div1').css("zIndex", -5);
+            $('#div2').css("zIndex", 5);
+            // $('#div2').css("display", "block");
+            c1 = 1;
+            c2 = 0;
+          },100);
+          $("#div2").transition({
+            rotateY: '0deg'
+          });
+          $("#div1").transition({
+            rotateY: '180deg'
+          });
+        }
+      });
+      $("#div2").on("mouseout",function(){
+        if(c2%2 == 0){
+          setTimeout(function(){
+            $('#div1').css("zIndex", 5);
+            $('#div2').css("zIndex", -5);
+            // $('#div2').css("display", "none");
+            c1 = 0;
+            c2 = 1;
+            // $("#div1").html("");
+          },100);
+
+          $("#div2").transition({
+            rotateY: '180deg'
+          });
+          $("#div1").transition({
+            rotateY: '0deg'
+          });
+        } 
+      });
+    });
+  </script>
+	
+
+</head>
+<body>
+<style>
+    /*div{
+      width: 150px;
+      height: 150px;
+      background-color: rgba(0,0,0, 1);
+      margin-top: 10px;
+      position: relative;
+      z-index: 4;
+    }
+    p{
+      font-family: Arial;
+      color:#fff;
+      margin:5px 5px;
+    }
+    #div1{
+      display:block;
+      background-color: #005682;
+
+    }
+    #div1:hover{
+      transform: rotateY(180deg);
+      transition:.4s;
+    }
+    #div2{
+      display:block;
+      background-color: #712F26;
+      z-index: -4;
+      transform: rotateY(-180deg);
+    }
+    #div2:hover{
+      transform: rotateY(180deg);
+      transition:.4s;
+    }*/
+  </style>
+	<!-- <div id="div1">
+		<p>Lorem ipsum dolor sit amet</p>
+	</div>
+	<div id="div2">
+		<p>1 2 3 4 5 6 7 8 9</p>
+	</div> -->
+
+
+
+<style>
+a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+}
+  .mblock { 
+  width: 640px;
+  position: relative;
+  margin: 0 auto;
+}
+#exam_index_module .exam_left_panel { 
+  overflow: hidden;
+  margin-left: 10px;
+  width: 310px;
+  height: 310px;
+  /*background: red;*/
+}
+#exam_index_module .subject_item { 
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+#exam_index_module .exam_left_panel .subject_item .si_front,#exam_index_module .exam_right_panel .subject_item .si_front { 
+  z-index: 50;
+  cursor: pointer;
+  width: 100%;
+  height: inherit;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+#exam_index_module .exam_left_panel .subject_item.flip .si_front,#exam_index_module .exam_right_panel .subject_item.flip .si_front { 
+  z-index: 60;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+#exam_index_module .exam_left_panel .subject_item .si_back,#exam_index_module .exam_right_panel .subject_item .si_back { 
+  position: absolute;
+  z-index: 70;
+  width: inherit;
+  height: inherit;
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateY(-180deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+#exam_index_module .exam_left_panel .subject_item.flip .si_back,#exam_index_module .exam_right_panel .subject_item.flip .si_back { 
+  z-index: 80;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+#exam_index_module .flip { 
+  z-index: 90;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+#exam_index_module .it_button.exam_test_gen { 
+  /*margin-top: 17px;*/
+}
+#exam_index_module .exam_right_panel .it_button.exam_test_gen { 
+  /*margin-top: 10px;*/
+}
+#exam_index_module .exam_right_panel { 
+  float: right;
+  width: 312px;
+  height: 312px;
+  overflow: hidden;
+  font-size: 12px;
+  /*background: blue;*/
+}
+#exam_index_module .exam_left_panel .exam_subject { 
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 10px 10px 0;
+  background-size: 150px;
+  background-repeat: no-repeat;
+}
+#exam_index_module .subject_math { 
+  background-color: #025669;
+}
+#exam_index_module .subject_math_back { 
+  background-color: #025669;
+}
+#exam_index_module .subject_history_kz { 
+  background-color: #2A52BE;
+}
+#exam_index_module .subject_history_kz_back { 
+  background-color: #2A52BE;
+}
+#exam_index_module .subject_kaz { 
+  background-color: #005682;
+  background-position: center -20px;
+}
+#exam_index_module .subject_kaz_back { 
+  background-color: #005682;
+}
+#exam_index_module .subject_rus { 
+  background-color: #712F26;
+  background-position: center -20px;
+}
+#exam_index_module .subject_rus_back { 
+  background-color: #712F26;
+}
+#exam_index_module .si_back { 
+  text-align: center;
+}
+#exam_index_module .si_back span { 
+  color: white;
+}
+#exam_index_module .sib_count { 
+  /*margin: 125px 0 0;*/
+}
+#exam_index_module .sib_count span { 
+  font-weight: bold;
+}
+#exam_index_module .user_progress { 
+  margin: 0;
+}
+#exam_index_module .sib_test_btns { 
+  overflow: hidden;
+  margin: 98px 17px 17px;
+  position: relative;
+}
+#exam_index_module .exam_right_panel .exam_subject { 
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: relative;
+  margin: 0 0 5px 5px;
+  background-size: 100px;
+  font-size: 12px;
+}
+.exam_right_panel .subject_geography { 
+  background-color: #2D572C;
+}
+.exam_right_panel .subject_geography_back { 
+  background-color: #2D572C;
+}
+.exam_right_panel .subject_biology { 
+  background-color: #00416A;
+  background-position: center -5px;
+}
+.exam_right_panel .subject_biology_back { 
+  background-color: #00416A;
+}
+.exam_right_panel .subject_eng { 
+  background-color: #16546e;
+  background-position: center -14px;
+}
+.exam_right_panel .subject_eng_back { 
+  background-color: #16546e;
+}
+.exam_right_panel .subject_world_history { 
+  background-color: #B32428;
+}
+.exam_right_panel .subject_world_history_back { 
+  background-color: #B32428;
+}
+.exam_right_panel .subject_ger { 
+  background-color: #015D52;
+  background-position: center -12px;
+}
+.exam_right_panel .subject_ger_back { 
+  background-color: #015D52;
+}
+.exam_right_panel .subject_fr { 
+  background-color: #8E4585;
+  background-position: center -12px;
+}
+.exam_right_panel .subject_fr_back { 
+  background-color: #8E4585;
+}
+.exam_right_panel .subject_chemistry { 
+  background-color: #472A3F;
+  background-position: center -5px;
+}
+.exam_right_panel .subject_chemistry_back { 
+  background-color: #472A3F;
+}
+.exam_right_panel .subject_physics { 
+  background-color: #8B0000;
+}
+.exam_right_panel .subject_physics_back { 
+  background-color: #8B0000;
+}
+.exam_right_panel .subject_literature_rus { 
+  background-color: #321011;
+  background-position: center -3px;
+}
+.exam_right_panel .subject_literature_rus_back { 
+  background-color: #321011;
+}
+.exam_right_panel .subject_literature_kaz { 
+  background-color: #fdad2e;
+  background-position: center -3px;
+}
+.exam_right_panel .subject_literature_kaz_back { 
+  background-color: #fdad2e;
+}
+#exam_index_module .exam_right_panel .sib_test_btns { 
+  margin: 35px 10px 10px;
+}
+#exam_index_module .exam_right_panel .sib_count { 
+  margin: 73px 0 0;
+}
+#exam_index_module .exam_left_panel .subject_item:nth-child(2n) .exam_subject { 
+  margin-right: 0;
+}
+#exam_index_module .exam_right_panel .subject_item:nth-child(3n+1) .exam_subject { 
+  margin-left: 0;
+}
+</style>
+<div class="mblock" id="exam_index_module">
+            <div class="exam_right_panel">
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_physics">
+              <div class = "subjectLeft"><img src="../img/460817415.jpg" height="auto" width="300" alt="" id = "img12"></div>
+              <p class = "subjectsName">Физика</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_physics_back">
+                    <div class="sib_test_btns">
+                      <a href="fizika-ru" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="76" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_chemistry">
+              <div class = "subjectLeft"><img src="../img/460817415.jpg" height="auto" width="300" alt="" id = "img13"></div>
+              <p class = "subjectsName">Химия</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_chemistry_back">
+                    <div class="sib_test_btns">
+                      <a href="himia-ru" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="75" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_biology">
+              <div class = "subjectLeft"><img src="../img/533885165.jpg" height="auto" width="250" alt="" id = "img14"></div>
+              <p class = "subjectsName">Биалогия</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_biology_back">
+                    <div class="sib_test_btns">
+                      <a href="biologia-ru" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="72" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_ger">
+                    <a href="nemeckiy-yazik" title="Немецкий язык" class="es_title">Немецкий язык</a>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_ger_back">
+                    <div class="sib_test_btns">
+                      <a href="nemeckiy-yazik" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="452" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_geography">
+              <div class = "subjectLeft"><img src="../img/geg.png" height="auto" width="60" alt="" id = "img15"></div>
+              <p class = "subjectsName geog">География</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_geography_back">
+                    <div class="sib_test_btns">
+                      <a href="geografia-ru" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="4" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_literature_rus">
+                    <a href="russkaya-literatura" title="Русская литература" class="es_title">Русская литература</a>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_literature_rus_back">
+                    <div class="sib_test_btns">
+                      <a href="russkaya-literatura" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="77" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_world_history">
+              <div class = "subjectLeft"><img src="../img/533885165.jpg" height="auto" width="250" alt="" id = "img17"></div>
+              <p class = "subjectsName">Всемирная<br>история</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_world_history_back">
+                    <div class="sib_test_btns">
+                      <a href="vsemirnaya-istoria" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="74" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_eng">
+              <div class = "subjectLeft"><img src="../img/elen.png" height="auto" width="60" alt="" id = "img18"></div>
+              <p class = "subjectsName">Английский<br>язык</p>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_eng_back">
+                    <div class="sib_test_btns">
+                      <a href="angliskiy-yazik" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="73" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subject_item">
+                <div class="si_front">
+                  <div class="exam_subject subject_fr">
+                    <a href="francuzskiy-yazik" title="Французcкий язык" class="es_title">Французcкий язык</a>
+                  </div>
+                </div>
+                <div class="si_back">
+                  <div class="exam_subject subject_fr_back">
+                    <div class="sib_test_btns">
+                      <a href="francuzskiy-yazik" class="it_button itb_orange" title="Перейти">Перейти</a>
+                      <a class="it_button exam_test_gen" data-node-id="453" title="Тест">Тест</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exam_left_panel">
+              <div class="elp_wrapper">
+                <div class="subject_item">
+                  <div class="si_front">
+                    <div class="exam_subject subject_math">
+              <div class = "subjectRight"><img src="../img/math.png" height="auto" width="80" alt="" id = "img11"></div>
+              <p class = "subjectsName1 math">Математика</p>
+                    </div>
+                  </div>
+                  <div class="si_back">
+                    <div class="exam_subject subject_math_back">
+                      <div class="sib_test_btns">
+                        <a href="matematika-ru" class="it_button itb_orange" title="Перейти">Перейти</a>
+                        <a class="it_button exam_test_gen" data-node-id="1" title="Тест">Тест</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject_item">
+                  <div class="si_front">
+                    <div class="exam_subject subject_history_kz">
+              <div class = "subjectRight"><img src="../img/history.jpg" height="auto" width="80" alt="" id = "img10"></div>
+              <p class = "subjectsName1">История<br>Казахстана</p>
+                    </div>
+                  </div>
+                  <div class="si_back">
+                    <div class="exam_subject subject_history_kz_back">
+                      <div class="sib_test_btns">
+                        <a href="istoria-kazahstana" class="it_button itb_orange" title="Перейти">Перейти</a>
+                        <a class="it_button exam_test_gen" data-node-id="68" title="Тест">Тест</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject_item">
+                  <div class="si_front">
+                    <div class="exam_subject subject_kaz">
+              <div class = "subjectRight"><img src="../img/klen.png" height="auto" width="80" alt="" id = "img11"></div>
+              <p class = "subjectsName1">Казахский<br>язык</p>
+                    </div>
+                  </div>
+                  <div class="si_back">
+                    <div class="exam_subject subject_kaz_back">
+                      <div class="sib_test_btns">
+                        <a href="kazahskiy-yazik" class="it_button itb_orange" title="Перейти">Перейти</a>
+                        <a class="it_button exam_test_gen" data-node-id="70" title="Тест">Тест</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject_item">
+                  <div class="si_front">
+                    <div class="exam_subject subject_rus">
+            <div class="subject_right div10 subject_last last_right">
+              <div class = "subjectRight"><img src="../img/rlen.png" height="auto" width="80" alt="" id = "img16"></div>
+              <p class = "subjectsName1">Русский<br>язык</p>
+                    </div>
+                  </div>
+                  <div class="si_back">
+                    <div class="exam_subject subject_rus_back">
+                      <div class="sib_test_btns">
+                        <a href="russkiy-yazik" class="it_button itb_orange" title="Перейти">Перейти</a>
+                        <a class="it_button exam_test_gen" data-node-id="71" title="Тест">Тест</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></body>
+</html> 

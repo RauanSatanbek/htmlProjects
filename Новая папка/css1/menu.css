@@ -1,0 +1,45 @@
+body{
+	font-family:Arial;
+}
+
+.menu{
+	width:1350px;
+	height: 100px;
+	background: url("../images/dropdown-list-bg.gif");
+}
+
+.nav li a{
+	background: url("../images/dropdown-bg.gif");
+	color:white;
+	display: block;
+	text-decoration: none;
+	margin: 1px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.main{
+	width: 100px;
+	height:30px;
+	padding-top: 10px;
+	list-style: none;
+	overflow: hidden;
+	text-align:left;
+}
+
+.main a:hover{
+	text-decoration: underline;
+}
+
+.main:hover{
+	height: 120px;
+}
+
+
+.div2{
+	margin: 50px;
+	background: url("../images/dropdown-bg.gif") repeat-x;
+	width: 500px;
+	height: 100px;
+}

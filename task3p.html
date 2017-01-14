@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<title></title>
+</head>
+<body>
+<div class = 'div8'> Решение задач на Python и Java
+</div>
+<h2><a href="task3.html" style="text-decoration: none;">Треугольник - 3</a></h2>
+<div class = 'div9'>
+	<h2 class = 'h21'>Python</h2>
+	<hr style="bacckground: #666;">
+	<pre>
+	fr = open('input.txt','r')
+    fw = open('output.txt','w')
+    x = fr.read()
+    f,m = x.split(),[]
+    for i in f:
+        m.append(int(i))
+    m.sort()
+    m1 = m.pop(-1)
+    if sum(m)>=m1:
+        fw.write('YES')
+    else:
+        fw.write('NO')
+    fw.close()
+       
+	</pre>
+</div>
+<div class = 'div10'>
+	<h2 class = 'h21' >Java</h2>
+	<hr style="bacckground: #666;">
+	<pre>
+import java.io.*;
+import java.util.*;
+public class Main{
+    public static void main(String args[]) throws IOException{
+        new Main().run();
+        }
+    Scanner fr;
+    PrintWriter fw;
+    int c = 0;
+    int v = 0;
+    private void run() throws IOException{
+        fr = new Scanner(new File("input.txt"));
+        fw = new PrintWriter(new File("output.txt"));
+        int a = fr.nextInt();
+        int b = a/2;
+        int m[] = new int[a];
+        for (int i = 0; i < m.length; i++){
+            m[i] = fr.nextInt();
+        }
+        Arrays.sort(m);
+        for (int i = 0; i < m.length; i++){
+            if (i < b){
+                c += m[i];
+            }
+            else v +=m[i];
+        }
+        fw.println(v - c);
+        fw.close();
+        
+    }
+}
+	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colors</title>
+	<script src = "Jquery/jquery-1.12.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			function rgb2hex(rgb) {
+			    rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+			    function hex(x) {
+			        return ("0" + parseInt(x).toString(16)).slice(-2);
+			    }
+			    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+			}
+
+			var m = $("div");
+			console.log(m.get(0));
+			for(var i = 0; i < m.length; i++){
+				console.log();
+				var Class = m.get(i).className;
+				$("." + Class).html('<p class = "color">' + rgb2hex($("." + Class).css("backgroundColor")) + '</p>');
+			}
+		});
+	</script>
+	<style>
+		.color{
+			text-align: center;
+			padding-top: 30px;
+		}
+		*{
+			margin: 0 0;
+			padding:0 0;
+			font-family:Arial;
+			text-decoration: none;
+			outline: none;
+			font-size: 15px;
+			color: #111;
+		}
+		
+		body{
+			background: url(images/seamless_paper_texture.png);
+		}
+		div{width: 80px;height: 80px;border-radius: 5px; border:1px solid #ccc;background: #fff;margin: 10px;margin-right: 0;display: inline-block;}
+		.div11{
+			background-color: #337ab7;
+			border-color: #2e6da4;
+		}
+		.div12{
+			background-color: #286090;
+			border-color: #122b40;
+		}
+		.div13{
+			background-color: #286090;
+			border-color: #204d74;
+		}
+
+		.div21 {
+			background-color: #5cb85c;
+			border-color: #4cae4c;
+		}
+		.div22 {
+			background-color: #449d44;
+			border-color: #255625;
+		}
+		.div23 {
+			background-color: #449d44;
+			border-color: #398439;
+		}
+		
+
+		.div31 {
+			background-color: #5bc0de;
+			border-color: #46b8da;
+		}
+		.div32 {
+			background-color: #31b0d5;
+			border-color: #1b6d85;
+		}
+		.div33 {
+			background-color: #31b0d5;
+			border-color: #269abc;
+		}
+
+		.div41 {
+			background-color: #f0ad4e;
+			border-color: #eea236;
+		}
+		.div42 {
+			background-color: #ec971f;
+			border-color: #985f0d;
+		}
+		.div43 {
+			background-color: #ec971f;
+			border-color: #d58512;
+		}
+		
+		.div51 {
+			background-color: #d9534f;
+			border-color: #d43f3a;
+		}
+		.div52 {
+			background-color: #c9302c;
+			border-color: #761c19;
+		}
+		.div53 {
+			background-color: #c9302c;
+			border-color: #ac2925;
+		}
+
+		.div61 {
+			background-color: #fff;
+			border-color: #ccc;
+		}
+		.div62 {
+			background-color: #e6e6e6;
+			border-color: #8c8c8c;
+		}
+		.div63 {
+			background-color: #e6e6e6;
+			border-color: #adadad;
+		}
+
+		.div71 {
+			background-color: #dff0d8;
+		}
+		.div72 {
+			background-color: #c1e2b3;
+		}
+
+		.div73 {
+			background-color: #d9edf7;
+		}
+		.div74 {
+			background-color: #afd9ee;
+		}
+		.div75 {
+			background-color: #fcf8e3;
+		}
+		.div76 {
+			background-color: #f7ecb5;
+		}
+		.div77 {
+			background-color: #f2dede;
+		}
+		.div78 {
+			background-color: #e4b9b9;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="div11"></div>
+	<div class="div12"></div>
+	<div class="div13"></div>
+
+	<div class="div21"></div>
+	<div class="div22"></div>
+	<div class="div23"></div>
+
+	<div class="div31"></div>
+	<div class="div32"></div>
+	<div class="div33"></div>
+
+	<div class="div41"></div>
+	<div class="div42"></div>
+	<div class="div43"></div>
+	<br>
+	<div class="div51"></div>
+	<div class="div52"></div>
+	<div class="div53"></div>
+
+	<div class="div61"></div>
+	<div class="div62"></div>
+	<div class="div63"></div>
+
+	<div class="div71"></div>
+	<div class="div72"></div>
+	<div class="div73"></div>
+	<div class="div74"></div>
+	<div class="div75"></div>
+	<div class="div76"></div>
+	<br>
+	<div class="div77"></div>
+	<div class="div78"></div>
+</body>
+</html>

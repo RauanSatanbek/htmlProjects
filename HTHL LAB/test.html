@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src = "Jquery/jquery-1.12.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			var c = $("#number").get(0);
+			console.log(c.options[c.selectedIndex].text);
+		});
+	});
+	</script>
+
+
+<style>
+	
+</style>
+</head>
+<body>
+	<select name="" id="number">
+		<option value="5">5</option>
+		<option value="10">10</option>
+		<option value="15">15</option>
+		<option value="20">20</option>
+	</select>	
+	<button id= "btn">click</button>
+</body>
+</html>
